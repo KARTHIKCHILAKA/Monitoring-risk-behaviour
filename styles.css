@@ -1,0 +1,264 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    display: flex;
+}
+
+.admin-block {
+    flex: 1;
+    padding: 20px;
+}
+
+.admin-details {
+    text-align: right;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+}
+
+.admin-details p {
+    margin: 0;
+}
+
+.dashboard {
+    flex: 3;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.data-info {
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    margin-bottom: 10px;
+}
+
+#user-search {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-buttons button {
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Dots for risk levels */
+.risk-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.low-risk {
+    background-color: green;
+}
+
+.medium-risk {
+    background-color: yellow;
+}
+
+.high-risk {
+    background-color: red;
+}
+
+
+
+.search-bar {
+    margin-bottom: 10px;
+    position: relative; /* Add position: relative to position the clear button relative to the search bar */
+}
+
+#user-search {
+    width: calc(100% - 40px); /* Adjust width to accommodate the clear button */
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    border: none;
+    background-color: #db3434;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+}
+
+
+.risk-level {
+    margin-left: 5px;
+    display: inline-block;
+}
+
+
+
+
+/* Style for the "Review User" button */
+#review-user-button {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor on hover */
+}
+
+#review-user-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Style for the risk level dropdown */
+#risk-level {
+    padding: 8px; /* Padding for the dropdown */
+    font-size: 14px; /* Font size */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+}
+
+
+
+
+/* Style for the "Delete User" button */
+#delete-user-button {
+    background-color: #f44336; /* Red background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor on hover */
+}
+
+#delete-user-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+
+.admin-details {
+    text-align: center;
+}
+
+#admin-name {
+    font-weight: bold;
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-block {
+    flex: 1;
+    margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.dashboard {
+    flex: 2;
+}
+
+
+
+
+/* Add this to styles.css */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#add-user-form {
+    display: grid;
+    gap: 10px;
+}
+
+#add-user-form label {
+    font-weight: bold;
+}
+
+
+.admin-image {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    border-radius: 50%; /* Optional: Make the image round */
+    margin-right: 10px; /* Optional: Add some margin to separate the image from text */
+} 

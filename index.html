@@ -1,0 +1,121 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Monitoring Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="admin-block">
+            <!-- Admin details -->
+            <div class="admin-details">
+                <p>Welcome, <span id="admin-name">Admin</span></p>
+                <img src="C:\Users\karth\OneDrive\Desktop\risk-monitor.jpg" alt="Admin Image" class="admin-image">
+            </div>
+
+
+
+
+            <!-- Admin login block (you can modify this as needed) -->
+            <div id="admin-login">
+                <!-- Admin login form goes here -->
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <!-- Main heading -->
+            <h1>Monitoring App</h1>
+
+            <!-- User data display -->
+            <div class="data-info">
+                <!-- Information about user's account update and risk level -->
+            </div>
+
+
+            <!-- Search bar with the clear button -->
+            <div class="search-bar">
+                <input type="text" id="user-search" placeholder="Search users..." oninput="searchUsers()">
+                <button onclick="clearSearch()">Clear</button>
+            </div>
+
+            <!-- Add this button where you have other buttons -->
+            <button id="delete-user-button" onclick="deleteSelectedUsers()">Delete User</button>
+
+
+            <!-- index.html -->
+
+            <!-- Add a new input field for the admin to set the risk level -->
+            <div class="review-section">
+                <label for="risk-level">Risk Level:</label>
+                <select id="risk-level" name="risk-level">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button onclick="reviewUser()">Review User</button>
+            </div>
+
+
+            <div class="user-list">
+                <!-- User list divided into pending and completed columns -->
+                <div class="tab-buttons">
+                    <!-- Tabs for switching between pending and completed -->
+                    <button onclick="showTab('pending')">Pending</button>
+                    <button onclick="showTab('completed')">Completed</button>
+                </div>
+                <div id="pending-tab" class="tab-content">
+                    <!-- Display pending user list in table format -->
+                    <table class="user-table" id="pending-table">
+                        <!-- Table content goes here -->
+                    </table>
+                </div>
+                <div id="completed-tab" class="tab-content">
+                    <!-- Display completed user list in table format -->
+                    <table class="user-table" id="completed-table">
+                        <!-- Table content goes here -->
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Add User button -->
+        <button id="add-user-button" onclick="openAddUserModal()">Add User</button>
+
+        <!-- User details modal -->
+        <div id="add-user-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeAddUserModal()">&times;</span>
+                <h2>Add User</h2>
+                <form id="add-user-form">
+                    <!-- Add user details fields here -->
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="daysInQueue">No Of Days In Queue:</label>
+                    <input type="number" id="daysInQueue" name="daysInQueue" required>
+
+                    <label for="riskLevel">Risk Level:</label>
+                    <select id="riskLevel" name="riskLevel">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+
+                    <label for="reason">Reason:</label>
+                    <textarea id="reason" name="reason" required></textarea>
+
+                    <button type="button" onclick="addUser()">Add User</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
